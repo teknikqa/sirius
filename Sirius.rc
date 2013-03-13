@@ -1,0 +1,405 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resrc1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Sirius.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDC_ADAPTER_COMBO
+    SEPARATOR
+    BUTTON      ID_COMMAND_START
+    BUTTON      ID_COMMAND_STOP
+    SEPARATOR
+    BUTTON      ID_FILTER_TCP
+    BUTTON      ID_FILTER_UDP
+    BUTTON      ID_FILTER_ICMP
+    SEPARATOR
+    BUTTON      ID_FILTER_REMOVESORTING
+    BUTTON      ID_VIEW_ALWAYSONTOP
+    SEPARATOR
+    BUTTON      ID_VIEW_RESOLVEADDRESSES
+    BUTTON      ID_VIEW_RESOLVEPORTNAMES
+    SEPARATOR
+    BUTTON      ID_VIEW_SETTINGS
+    SEPARATOR
+    BUTTON      ID_HELP_DOCUMENTATION
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Command"
+    BEGIN
+        MENUITEM "&Start\tCtrl+S",              ID_COMMAND_START
+        MENUITEM "S&top\tCtrl+T",               ID_COMMAND_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+X",                ID_COMMAND_EXIT
+    END
+    POPUP "&Filter"
+    BEGIN
+        MENUITEM "&TCP\tCtrl+1",                ID_FILTER_TCP
+        MENUITEM "&UDP\tCtrl+2",                ID_FILTER_UDP
+        MENUITEM "&ICMP\tCtrl+3",               ID_FILTER_ICMP
+        MENUITEM SEPARATOR
+        MENUITEM "&Remove sorting",             ID_FILTER_REMOVESORTING
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Always on top",              ID_VIEW_ALWAYSONTOP
+        MENUITEM "&Resolve addresses\tF11",     ID_VIEW_RESOLVEADDRESSES
+        MENUITEM "Resolve &port names\tF12",    ID_VIEW_RESOLVEPORTNAMES
+        MENUITEM SEPARATOR
+        MENUITEM "Settings ...",                ID_VIEW_SETTINGS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Documentation\tF1",          ID_HELP_DOCUMENTATION
+        MENUITEM SEPARATOR
+        MENUITEM "&About",                      ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 215, 159
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,185,10,20,20
+    LTEXT           "Sirius Copyright © 2001-2005",IDC_STATIC,7,10,116,8,
+                    SS_NOPREFIX
+    LTEXT           "project page: ",IDC_STATIC,7,32,43,8
+    LTEXT           "http://www.geocities.com/teknikqa/",IDC_SITE,50,32,129,
+                    8
+    LTEXT           "Teknikqa",IDC_AUTHOR,115,10,31,8
+    GROUPBOX        " Brief description and license information ",IDC_STATIC,
+                    7,47,199,105,BS_CENTER
+    EDITTEXT        IDC_INFO,11,56,192,95,ES_MULTILINE | ES_READONLY | NOT 
+                    WS_BORDER | WS_VSCROLL | NOT WS_TABSTOP
+    LTEXT           "home page:",IDC_STATIC,7,21,38,8
+    LTEXT           "http://www.geocities.com/teknikqa/",IDC_HOME,50,21,101,
+                    8
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 237, 148
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Show Traffic - Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_IDLESECONDS,172,12,27,14,ES_RIGHT | ES_NUMBER
+    CONTROL         "Use &log file",IDC_USELOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,41,51,10,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_LOGTYPE,48,56,176,74,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_LOGFILE,48,74,137,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_BROWSE,187,74,36,14
+    CONTROL         "Automaticaly &delete log file if bigger than",
+                    IDC_DELETELOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,
+                    97,140,10
+    EDITTEXT        IDC_DELETEMB,155,96,27,14,ES_RIGHT | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,122,127,52,14
+    PUSHBUTTON      "Cancel",IDCANCEL,178,127,52,14
+    LTEXT           "Seconds before remove idle connections (1-999):",
+                    IDC_STATIC,13,15,156,8
+    GROUPBOX        " List settings ",IDC_STATIC,7,3,223,32
+    GROUPBOX        "                          ",IDC_STATIC,7,41,223,77
+    LTEXT           "Log type:",IDC_STATIC1,13,57,30,8
+    LTEXT           "Log to &file:",IDC_STATIC2,13,76,34,8
+    LTEXT           "MB",IDC_STATIC3,186,97,12,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,4,1,45
+ PRODUCTVERSION 1,4,1,45
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Open Source by Teknikqa (http://www.geocities.com/teknikqa/ or teknikqa@gmail.com)\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Monitors network traffic and displays it\0"
+            VALUE "FileVersion", "1, 4, 1, 45\0"
+            VALUE "InternalName", "Sirius\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001-2005 Nick Ipe Mathew, N-Tech Inc.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Sirius.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Sirius\0"
+            VALUE "ProductVersion", "1, 4, 1, 45\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "1",            ID_FILTER_TCP,          VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_FILTER_UDP,          VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_FILTER_ICMP,         VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_COMMAND_START,       VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_COMMAND_STOP,        VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP_DOCUMENTATION,  VIRTKEY, NOINVERT
+    VK_F11,         ID_VIEW_RESOLVEADDRESSES, VIRTKEY, NOINVERT
+    VK_F12,         ID_VIEW_RESOLVEPORTNAMES, VIRTKEY, NOINVERT
+    "X",            ID_COMMAND_EXIT,        VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SETTINGS DLGINIT
+BEGIN
+    IDC_LOGTYPE, 0x403, 36, 0
+0x4548, 0x2058, 0x202b, 0x4554, 0x5458, 0x6920, 0x636e, 0x756c, 0x6564, 
+0x2073, 0x7270, 0x746f, 0x636f, 0x6c6f, 0x6820, 0x6165, 0x6564, 0x0072, 
+
+    IDC_LOGTYPE, 0x403, 30, 0
+0x4554, 0x5458, 0x6920, 0x636e, 0x756c, 0x6564, 0x2073, 0x7270, 0x746f, 
+0x636f, 0x6c6f, 0x6820, 0x6165, 0x6564, 0x0072, 
+    IDC_LOGTYPE, 0x403, 29, 0
+0x4548, 0x2058, 0x6e69, 0x6c63, 0x6475, 0x7365, 0x7020, 0x6f72, 0x6f74, 
+0x6f63, 0x206c, 0x6568, 0x6461, 0x7265, "\000" 
+    IDC_LOGTYPE, 0x403, 11, 0
+0x4548, 0x2058, 0x202b, 0x4554, 0x5458, "\000" 
+    IDC_LOGTYPE, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDC_LOGTYPE, 0x403, 4, 0
+0x4548, 0x0058, 
+    IDC_LOGTYPE, 0x403, 17, 0
+0x6e6f, 0x796c, 0x6820, 0x6165, 0x6564, 0x2072, 0x6e69, 0x6f66, "\000" 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Sirius\n\nShowTr\n\n\nstr\nShowTr Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Sirius (c) Teknikqa, N-Tech Inc."
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    IDS_BEGIN               "Select adapter from Adapter list and press Start button to begin"
+    IDS_NODATA              "No data packets available! Keep searching ..."
+    IDS_INFO                "Sirius - monitors network traffic on the chosen network interface and displays it continuously. It could be used for locating suspicious network traffic or to evaluate current utilization of the network interface.\r\n\r\nLicense: BSD style (see license.txt)\r\n\r\nSirius is an open source project\r\n\r\nCreated by Teknikqa for N-Tech Inc.\r\nCopyright (c) 2001-2005, All rights reserved."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_COMMAND_START        "Start traffic watch\nStart (Ctrl+S)"
+    ID_COMMAND_STOP         "Stop traffic watch\nStop (Ctrl+T)"
+    ID_COMMAND_EXIT         "Quit Sirius\nQuit"
+    ID_FILTER_TCP           "Remove TCP packets\nNo TCP (Ctrl+1)"
+    ID_FILTER_UDP           "Remove UDP packets\nNo UDP (Ctrl+2)"
+    ID_FILTER_ICMP          "Remove ICMP packets\nNo ICMP (Ctrl+3)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ADAPTER_COMBO       "Show avaiable adapters\nAdapters list"
+    ID_FILTER_REMOVESORTING "Remove list sorting\nRemove sorting"
+    ID_VIEW_ALWAYSONTOP     "Set this window always on top\nAlways on top"
+    ID_VIEW_RESOLVEADDRESSES "Resolve address names\nResolve addresses (F11)"
+    ID_VIEW_RESOLVEPORTNAMES 
+                            "Show port numbers as services names\nResolve port names (F12)"
+    ID_VIEW_SETTINGS        "Change settings\nSettings"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BYTES_SEC            "b/s: 0   avr b/s: 0"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_DOCUMENTATION   "Show documentation\nHelp information"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

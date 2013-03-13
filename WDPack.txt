@@ -1,0 +1,11 @@
+
+You will need to download WinPcap developer's pack (WDPack) in order to compile
+
+The project is set up to use WDPack 2.3 from <project_dir>\WPdpack
+
+In order to change this you will need to fix the includes and lib
+inside the source files and the project
+
+Download WDPack from http://winpcap.polito.it
+
+Teknikqa

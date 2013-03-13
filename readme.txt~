@@ -1,0 +1,23 @@
+README
+======
+
+Sirius is a Network Traffic Monitor and Intrusion Detector.
+This project uses Winpcap.
+
+ToDo:
+
+7. Sorting - dynamic ?
+15. Make it UNICODE ready ?
+19. Make columns select in settings dialog ?
+21. Add MAC - ip to columns?
+22. Make some real help
+
+History:
+
+- Added log files functionality
+- First Open Source version released under the terms of the BSD license
+- Included WinPcap 2.3. Now runs under MS Windows XP!
+- Fixed bug, adapters list is now correctly shown in Windows 95/98/Me
+- Changed synhronization algorithm. Must crash less now :)
+- Fixed setup, "resolve port names" now works.
+
